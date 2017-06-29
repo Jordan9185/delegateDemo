@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ProductManagerDelegate: class {
+protocol ProductManagerDelegate {
     
     func manager(_ manager: ProductManager, didGet products: String)
     
@@ -18,7 +18,7 @@ protocol ProductManagerDelegate: class {
 
 class ProductManager {
 
-    weak var delegate :ProductManagerDelegate?
+    var delegate :ProductManagerDelegate?
     // Add a singleton property here
     
     func requestProducts() {
